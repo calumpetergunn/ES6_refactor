@@ -1,4 +1,4 @@
-export default class Library {
+class Library {
   constructor (books = []) {
     this.books = books;
   } 
@@ -12,7 +12,7 @@ export default class Library {
   }
 
   addBooks(newBooks){
-    newBooks.forEach(book => this.books.push(book));
+    this.books = [...this.books, ...newBooks];
   }
 
   printInventory(){
@@ -23,3 +23,5 @@ export default class Library {
   };
 
 }
+
+export default Library;
